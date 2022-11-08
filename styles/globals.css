@@ -1,26 +1,45 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer base{
+  body{
+    font: 1em sans-serif;
+    color: #fdfdfd;
+    background-color: #333;
   }
-  body {
-    color: white;
-    background: black;
+  button{
+    border:solid 1px #b60003;
+    border-radius:6px;
+  }
+  ul{
+    style:none;
+  }
+  option,select{
+    color: black;
+    outline: none;
+  }
+  #AmountNumb{
+    border: 1px solid #b60003
+  }
+  input{
+    outline: none;
+    padding: 3px;
+    color: black;
+  }
+  hr{
+    border: none;
+    height: 1px;
+    background-color: gray;
+  }
+  .carousel {
+    display: inline-flex;
+    overflow-x: hidden;
+    /*  scroll snap is a great feature which will center the image on snap on touch screen devices  */
+    scroll-snap-type: x mandatory;
+    /* all below will hide the scrollbar on all browsers.    */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
   }
 }
